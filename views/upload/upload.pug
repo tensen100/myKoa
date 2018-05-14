@@ -1,0 +1,26 @@
+extends  ./../admin
+block content
+    .layui-breadcrumb
+        a(href='#') 系统用户
+        a
+            cite 文件上传
+    form.layui-form(method='post' action= '/system/upload/upload' enctype="multipart/form-data")
+       .layui-form-item
+           label.layui-form-label 姓名
+           .layui-input-inline
+               input.layui-input(type="text" name="name" )
+       .layui-form-item
+           label.layui-form-label 电话
+           .layui-input-inline
+               input.layui-input(type="text" name="phone" )
+       .layui-form-item
+           label.layui-form-label 图片1
+           .layui-input-inline
+               input.layui-input(type="file" name="img1" )
+       .layui-form-item
+           label.layui-form-label 图片2
+           .layui-input-inline
+               input.layui-input(type="file" name="img2" )
+       .layui-form-item
+           .layui-input-block
+               button.layui-btn(lay-submit) 提交

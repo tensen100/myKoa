@@ -1,0 +1,26 @@
+extends  ./../admin
+block content
+    .layui-breadcrumb
+        a(href='#') 系统用户
+        a(href='#') 用户组管理
+        a
+            cite 权限控制
+    form.layui-form
+        .layui-collapse
+            each module in modules
+                .layui-colla-item
+                    h2.layui-colla-title=module.name
+                    .layui-colla-content
+                        table.layui-table
+                            each child in module.children
+                                if child.children.length > 0
+                                    tr.layui-bg-green
+                                        td(colspan="3")=child.name
+                                    each ch in child.children
+                                        tr
+                                            td=ch.name
+                                            td
+                                                input(type="checkbox" lay-skin="primary")
+                                            td
+                                                each per in ch.permission
+                                                    input(type="checkbox" title=per.name lay-skin="primary" checked=per.checked)

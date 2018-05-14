@@ -1,0 +1,27 @@
+extends  ./../admin
+block content
+     .layui-breadcrumb
+          a(href='#') 系统用户
+          a
+               cite 用户组管理
+     table.layui-table
+          colgroup
+               col(width="150")
+               col(width="150")
+               col
+          thead
+               tr
+                    th ID
+                    th 分组名称
+                    th 英文标识
+                    th 操作
+          tbody
+               each item in list
+                    tr
+                         td=item.id
+                         td=item.name
+                         td=item.tag
+                         td
+                              a.layui-btn.layui-btn-normal(href='/system/group/edit/'+item.id) 编辑
+                              a.layui-btn.layui-btn-normal(href='/system/group/permission/'+item.id) 权限
+

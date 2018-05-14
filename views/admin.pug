@@ -1,0 +1,71 @@
+extends layout
+
+block layout
+    .layui-layout.layui-layout-admin
+        .layui-header
+            .layui-logo 后台管理
+            // 头部区域
+            ul.layui-nav.layui-layout-left
+                li.layui-nav-item
+                    a(href='') 控制台
+                li.layui-nav-item
+                    a(href='') 商品管理
+                li.layui-nav-item
+                    a(href='') 用户
+                li.layui-nav-item
+                    a(href='javascript:void(0);') 其它系统
+                    dl.layui-nav-child
+                        dd
+                            a(href='') 邮件管理
+                        dd
+                            a(href='') 消息管理
+                        dd
+                            a(href='') 授权管理
+            ul.layui-nav.layui-layout-right
+                li.layui-nav-item
+                    a(href="javascript:;")
+                        img.layui-nav-img(src='/images/avatar.jpg')
+                        | 张三
+                    dl.layui-nav-child
+                        dd
+                            a(href='') 基本资料
+                        dd
+                            a(href='') 安全设置
+                li.layui-nav-item 退出
+        .layui-side.layui-bg-black
+            .layui-side-scroll
+                // 左侧导航
+                ul.layui-nav.layui-nav-tree
+                    li.layui-nav-item
+                        a(href="javascript:;") 系统用户管理
+                        dl.layui-nav-child
+                            dd
+                                a(href="javascript:;") 用户组管理
+                            dd
+                                a(href="javascript:;") 角色管理
+                            dd
+                                a(href="javascript:;") 用户管理
+                            dd
+                                a(href="javascript:;") 权限模块
+                    li.layui-nav-item
+                        a(href="javascript:;") 解决方案
+                        dl.layui-nav-child
+                            dd
+                                a(href="javascript:;") 列表一
+                            dd
+                                a(href="javascript:;") 列表二
+                            dd
+                                a(href="javascript:;") 列表三
+
+                    li.layui-nav-item.layui-nav-itemed
+                        a(href="javascript:;") 云市场
+                    li.layui-nav-item.layui-nav-itemed
+                        a(href="javascript:;") 发布商品
+        // 内容区域
+        .layui-body
+            div(style="padding:15px")
+                block content
+        // 底部固定区域
+        .layui-footer © layui.com - 底部固定区域
+
+

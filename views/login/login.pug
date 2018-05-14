@@ -1,0 +1,19 @@
+extends  ./../layout
+block layout
+    .layui-container
+
+        form.layui-form(action='/system/login/verify')
+            .layui-col-md4.layui-col-md-offset4
+            .layui-form-item
+                label.layui-form-label 用户
+                .layui-input-block
+                    input.layui-input(type="text" name="user[name]")
+            .layui-form-item
+                label.layui-form-label 密码
+                .layui-input-block
+                    input.layui-input(type="text" name="user[password]")
+            .layui-form-item
+                label.layui-form-label
+                .layui-input-block
+                    button.layui-btn(lay-submit) 登录
+                    button.layui-btn(type="reset") 重置
